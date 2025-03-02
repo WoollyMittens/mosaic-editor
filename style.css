@@ -1,0 +1,132 @@
+:root {
+    --tile-amethyst: url("./images/size-590x590-exotic-amethyst.png");
+    --tile-leaf: url("./images/size-590x590-exotic-leaf.png");
+    --tile-marshmallow: url("./images/size-590x590-exotic-marshmallow.png");
+    --tile-ocean: url("./images/size-590x590-exotic-ocean.png");
+    --tile-ruby: url("./images/size-590x590-exotic-ruby.png");
+    --tile-sand: url("./images/size-590x590-exotic-sand.png");
+    --tile-sky: url("./images/size-590x590-exotic-sky.png");
+    --tile-snow: url("./images/size-590x590-exotic-snow.png");
+    --tile-sunset: url("./images/size-590x590-exotic-sunset.png");
+}
+
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    margin: 0;
+    @media(max-width:767px) {
+        padding: 1rem;
+    }
+}
+* {
+    box-sizing: border-box;
+}
+#mosaic-grid {
+    figure {
+        display: grid;
+        margin: 0 0 1rem;
+        padding: 0;
+        button {
+            cursor: pointer;
+            background-size: 105% auto;
+            background-position: center;
+            border: none;
+            &[data-tile="amethyst"] { background-image: var(--tile-amethyst); }
+            &[data-tile="leaf"] { background-image: var(--tile-leaf); }
+            &[data-tile="marshmallow"] { background-image: var(--tile-marshmallow); }
+            &[data-tile="ocean"] { background-image: var(--tile-ocean); }
+            &[data-tile="ruby"] { background-image: var(--tile-ruby); }
+            &[data-tile="sand"] { background-image: var(--tile-sand); }
+            &[data-tile="sky"] { background-image: var(--tile-sky); }
+            &[data-tile="snow"] { background-image: var(--tile-snow); }
+            &[data-tile="sunset"] { background-image: var(--tile-sunset); }
+        }
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        input {
+            border-color: #333;
+            border-width: 1px;
+            border-radius: 3px;
+        }
+    }
+    label {
+        font-size: 0.875rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 0.25rem;
+        input {
+            display: block;
+        }
+    }
+    label:has([data-action="cols"]),
+    label:has([data-action="rows"]) {
+        input {
+            min-height: 2rem;
+            padding: 0.25rem 0 0.35rem 1rem;
+        }
+    }
+    label:has([data-action="gap"]) {
+        input {
+            min-height: 2rem;
+        }
+    }
+    label:has([data-action="grout"]) {
+        input {
+            width: 2rem;
+            height: 2rem;
+            padding: 0;
+        }
+    }
+    [data-action="tiles"] {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        span {
+            flex: 1 1 100%;
+            font-size: 0.875rem;
+            display: block;
+        }
+        label {
+            flex: 0 1 auto;
+            font-size: 0;
+            border-style: solid;
+            border-color: #333;
+            border-width: 1px;
+            border-radius: 3px;
+            display: inline-block;
+            overflow: hidden;
+            width: 2rem;
+            height: 2rem;
+            &:has(input:checked) {
+                outline: dashed 2px #cc3300;
+            }
+        }
+        input {
+            opacity: 0;
+        }
+    }
+    [data-action="tiles"] label { background-size: 110%; background-position: center; }
+    [data-action="tiles"] label:has([value="amethyst"]) { background-image: var(--tile-amethyst); }
+    [data-action="tiles"] label:has([value="leaf"]) { background-image: var(--tile-leaf); }
+    [data-action="tiles"] label:has([value="marshmallow"]) { background-image: var(--tile-marshmallow); }
+    [data-action="tiles"] label:has([value="ocean"]) { background-image: var(--tile-ocean); }
+    [data-action="tiles"] label:has([value="ruby"]) { background-image: var(--tile-ruby); }
+    [data-action="tiles"] label:has([value="sand"]) { background-image: var(--tile-sand); }
+    [data-action="tiles"] label:has([value="sky"]) { background-image: var(--tile-sky); }
+    [data-action="tiles"] label:has([value="snow"]) { background-image: var(--tile-snow); }
+    [data-action="tiles"] label:has([value="sunset"]) { background-image: var(--tile-sunset); }
+    [data-action="shuffle"] {
+        cursor: pointer;
+        min-height: 2rem;
+        padding: 0.25rem 1rem;
+        border-color: #333;
+        border-width: 1px;
+        border-radius: 3px;
+    }
+}

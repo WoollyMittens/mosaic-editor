@@ -3,55 +3,21 @@
 
 <head>
 	<title>Tile Mosaic Editor</title>
-	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width" />
-	<style>
-		body {
-			font-family: sans-serif;
-			padding: 2rem;
-			margin: 0;
-		}
-		* {
-			box-sizing: border-box;
-		}
-		.mosaic-grid {
-			figure {
-				display: grid;
-			}
-			nav {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 1rem;
-			}
-			[data-action="cols"] {}
-			[data-action="rows"] {}
-			[data-action="gap"] {}
-			[data-action="grout"] {}
-			[data-action="tiles"] {}
-			[data-action="tiles"] label { background-size: 110%; background-position: center; }
-			[data-action="tiles"] label:has([value="amethyst"]) { background-image: url("./images/size-590x590-exotic-amethyst.png"); }
-			[data-action="tiles"] label:has([value="leaf"]) { background-image: url("./images/size-590x590-exotic-leaf.png"); }
-			[data-action="tiles"] label:has([value="marshmallow"]) { background-image: url("./images/size-590x590-exotic-marshmallow.png"); }
-			[data-action="tiles"] label:has([value="ocean"]) { background-image: url("./images/size-590x590-exotic-ocean.png"); }
-			[data-action="tiles"] label:has([value="ruby"]) { background-image: url("./images/size-590x590-exotic-ruby.png"); }
-			[data-action="tiles"] label:has([value="sand"]) { background-image: url("./images/size-590x590-exotic-sand.png"); }
-			[data-action="tiles"] label:has([value="sky"]) { background-image: url("./images/size-590x590-exotic-sky.png"); }
-			[data-action="tiles"] label:has([value="snow"]) { background-image: url("./images/size-590x590-exotic-snow.png"); }
-			[data-action="tiles"] label:has([value="sunset"]) { background-image: url("./images/size-590x590-exotic-sunset.png"); }
-		}
-	</style>
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=10, width=device-width" />
+	<link href="./style.css" rel="stylesheet" />
 </head>
 
 <body>
 
-	<section class="mosaic-grid">
+	<section id="mosaic-grid">
 		<figure></figure>
 		<nav>
-			<label>Colums: <input type="number" min="1" max="99" step="1" data-action="cols" value="15"/></label>
-			<label>Rows: <input type="number" min="1" max="99" step="1" data-action="rows" value="5"/></label>
+			<label>Colums: <input type="number" min="1" max="99" step="1" data-action="cols" value="16"/></label>
+			<label>Rows: <input type="number" min="1" max="99" step="1" data-action="rows" value="6"/></label>
 			<label>Gap: <input type="range" min="0" max="8" step="1" data-action="gap" value="4"/></label>
 			<label>Grout: <input type="color" data-action="grout" value="#999999"/></label>
 			<div role="radiogroup" data-action="tiles">
-				Tile:
+				<span>Tile:</span>
 				<label>Amethyst <input type="radio" name="tile" value="amethyst" checked/></label>
 				<label>Leaf <input type="radio" name="tile" value="leaf"/></label>
 				<label>Marshmallow <input type="radio" name="tile" value="marshmallow"/></label>
@@ -62,75 +28,11 @@
 				<label>Snow <input type="radio" name="tile" value="snow"/></label>
 				<label>Sunset <input type="radio" name="tile" value="sunset"/></label>
 			</div>
-			<button data-action="randomise">Shuffle</button>
+			<button data-action="shuffle">Shuffle</button>
 		</nav>
 	</section>
 
-	<script>
-		
-		class MosaicGrid {
-			constructor(cfg) {
-				// configure the container's grid properties
-				this.container = document.querySelector(cfg.container);
-				this.grid = cfg.container.querySelectorAll('figure');
-				// fill the grid with enough tiles
-					// add click handler to each grid
-				// add the action to the rows input
-				// add the action to the columns input
-				// add the action to the gap slider
-				// add the action to the grout colour
-				// add the actions to the tile swatches
-				// add the action to the randomise button
-			}
-
-			set rows(value) {}
-
-			get rows() {
-				return null;
-			}
-
-			set cols(value) {}
-
-			get cols() {
-				return null;
-			}
-
-			set gap(value) {}
-
-			get gap() {
-				return null;
-			}
-
-			set grout(value) {}
-
-			get grout() {
-				return null;
-			}
-
-			set grout(value) {}
-
-			get grout() {
-				return null;
-			}
-
-			set tile(value) {}
-
-			get tile() {
-				return null;
-			}
-
-		}
-
-		new mosaicGrid({
-			'container': cfg.querySelector('.mosaic-grid'),
-			'cols': cfg.querySelector('.mosaic-grid [data-action="cols"]'),
-			'rows': cfg.querySelector('.mosaic-grid [data-action="rows"]'),
-			'gap': cfg.querySelector('.mosaic-grid [data-action="gap"]'),
-			'grout': cfg.querySelector('.mosaic-grid [data-action="grout"]'),
-			'tiles': cfg.querySelectorAll('.mosaic-grid [data-action="tiles"] input')
-		});
-
-	</script>
+	<script src="./script.js" type="module"></script>
 
 </body>
 
