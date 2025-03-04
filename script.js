@@ -104,14 +104,35 @@ class MosaicGrid {
     generateMosaic(evt) {
         // cancel the click
         evt.preventDefault();
-        // TODO: without adjacent duplicates
+        // get the tiles and swatches
         const tiles = this.cfg.grid.querySelectorAll('button');
         const swatches = this.cfg.tiles.querySelectorAll('input');
-        for (let tile of tiles) {
-            let max = swatches.length;
-            let pick = Math.round(max * Math.random() - 0.499);
-            let swatch = swatches[pick];
-            tile.setAttribute('data-tile', swatch.value);
+        const max = swatches.length;
+        const cols = this.cols;
+        // pick tiles without identical adjacents
+        for (let index = 0; index < tiles.length; index += 1) {
+			// calculate the coordinates
+            let tile = tiles[index];
+			let x = index % cols;
+			let y = parseInt(index / cols);
+            // calculate the indices of the surrounding tiles
+            let top = x + (y - 1) * cols;
+            let right = (x + 1) + y * cols;
+            let bottom = x + (y + 1) * cols;
+            let left = (x - 1) + y * cols;
+            // pick a non-repeating tile
+            let value;
+            do {
+                let pick = Math.floor(max * Math.random());
+                value = swatches[pick].value;
+            } while (
+                value == tiles[top]?.getAttribute('data-tile') || 
+                value == tiles[right]?.getAttribute('data-tile') ||
+                value == tiles[bottom]?.getAttribute('data-tile') || 
+                value == tiles[left]?.getAttribute('data-tile')
+            );
+            // assign the value to the tile
+            tile.setAttribute('data-tile', value);
         }
     }
 
