@@ -117,8 +117,6 @@ class MosaicGrid {
 			let y = parseInt(index / cols);
             // calculate the indices of the surrounding tiles
             let top = x + (y - 1) * cols;
-            let right = (x + 1) + y * cols;
-            let bottom = x + (y + 1) * cols;
             let left = (x - 1) + y * cols;
             // pick a non-repeating tile
             let value;
@@ -127,8 +125,6 @@ class MosaicGrid {
                 value = swatches[pick].value;
             } while (
                 value == tiles[top]?.getAttribute('data-tile') || 
-                value == tiles[right]?.getAttribute('data-tile') ||
-                value == tiles[bottom]?.getAttribute('data-tile') || 
                 value == tiles[left]?.getAttribute('data-tile')
             );
             // assign the value to the tile
