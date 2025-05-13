@@ -132,6 +132,8 @@ class MosaicGrid {
             // assign the value to the tile
             tile.setAttribute('data-tile', value);
         }
+        // tally the tiles
+        this.tallyTiles();
     }
 
     tallyTiles() {
