@@ -1,13 +1,53 @@
 :root {
-    --tile-amethyst: url("./images/size-590x590-exotic-amethyst.png");
-    --tile-leaf: url("./images/size-590x590-exotic-leaf.png");
-    --tile-marshmallow: url("./images/size-590x590-exotic-marshmallow.png");
-    --tile-ocean: url("./images/size-590x590-exotic-ocean.png");
-    --tile-ruby: url("./images/size-590x590-exotic-ruby.png");
-    --tile-sand: url("./images/size-590x590-exotic-sand.png");
-    --tile-sky: url("./images/size-590x590-exotic-sky.png");
-    --tile-snow: url("./images/size-590x590-exotic-snow.png");
-    --tile-sunset: url("./images/size-590x590-exotic-sunset.png");
+    --tile-alface: url("./images/alface.png");
+    --tile-alfazema: url("./images/alfazema.png");
+    --tile-amarelo: url("./images/amarelo.png");
+    --tile-ambar: url("./images/ambar.png");
+    --tile-areia: url("./images/areia.png");
+    --tile-artico: url("./images/artico.png");
+    --tile-atlantico: url("./images/atlantico.png");
+    --tile-bege: url("./images/bege.png");
+    --tile-beringela: url("./images/beringela.png");
+    --tile-blanco: url("./images/blanco.png");
+    --tile-bosque: url("./images/bosque.png");
+    --tile-branco: url("./images/branco.png");
+    --tile-cacau: url("./images/cacau.png");
+    --tile-camelo: url("./images/camelo.png");
+    --tile-camomila: url("./images/camomila.png");
+    --tile-camurca: url("./images/camurca.png");
+    --tile-celeste: url("./images/celeste.png");
+    --tile-cinza-claro: url("./images/cinza-claro.png");
+    --tile-cinza-escuro: url("./images/cinza-escuro.png");
+    --tile-cobalto: url("./images/cobalto.png");
+    --tile-costanho: url("./images/costanho.png");
+    --tile-creme: url("./images/creme.png");
+    --tile-sunset: url("./images/encarnado.png");
+    --tile-esmeralda: url("./images/esmeralda.png");
+    --tile-indigo: url("./images/indigo.png");
+    --tile-kiwi: url("./images/kiwi.png");
+    --tile-laranja: url("./images/laranja.png");
+    --tile-logoa: url("./images/logoa.png");
+    --tile-marfim: url("./images/marfim.png");
+    --tile-marinho: url("./images/marinho.png");
+    --tile-menta: url("./images/menta.png");
+    --tile-nordico: url("./images/nordico.png");
+    --tile-papaua: url("./images/papaua.png");
+    --tile-papiro: url("./images/papiro.png");
+    --tile-erola: url("./images/erola.png");
+    --tile-petroleo: url("./images/petroleo.png");
+    --tile-preto: url("./images/preto.png");
+    --tile-rosa-clara: url("./images/rosa-clara.png");
+    --tile-rosa-velho: url("./images/rosa-velho.png");
+    --tile-safira: url("./images/safira.png");
+    --tile-salmoa: url("./images/salmoa.png");
+    --tile-sangue-de-boi: url("./images/sangue-de-boi.png");
+    --tile-tangerina: url("./images/tangerina.png");
+    --tile-tejo: url("./images/tejo.png");
+    --tile-tempestade: url("./images/tempestade.png");
+    --tile-turquesa: url("./images/turquesa.png");
+    --tile-verde-agua: url("./images/verde-agua.png");
+    --tile-verde-garrafa: url("./images/verde-garrafa.png");
+    --tile-verde-nero: url("./images/verde-nero.png");
 }
 
 body {
@@ -31,15 +71,55 @@ body {
             background-size: 105% auto;
             background-position: center;
             border: none;
-            &[data-tile="amethyst"] { background-image: var(--tile-amethyst); }
-            &[data-tile="leaf"] { background-image: var(--tile-leaf); }
-            &[data-tile="marshmallow"] { background-image: var(--tile-marshmallow); }
-            &[data-tile="ocean"] { background-image: var(--tile-ocean); }
-            &[data-tile="ruby"] { background-image: var(--tile-ruby); }
-            &[data-tile="sand"] { background-image: var(--tile-sand); }
-            &[data-tile="sky"] { background-image: var(--tile-sky); }
-            &[data-tile="snow"] { background-image: var(--tile-snow); }
+            &[data-tile="alface"] { background-image: var(--tile-alface); }
+            &[data-tile="alfazema"] { background-image: var(--tile-alfazema); }
+            &[data-tile="amarelo"] { background-image: var(--tile-amarelo); }
+            &[data-tile="ambar"] { background-image: var(--tile-ambar); }
+            &[data-tile="areia"] { background-image: var(--tile-areia); }
+            &[data-tile="artico"] { background-image: var(--tile-artico); }
+            &[data-tile="atlantico"] { background-image: var(--tile-atlantico); }
+            &[data-tile="bege"] { background-image: var(--tile-bege); }
+            &[data-tile="beringela"] { background-image: var(--tile-beringela); }
+            &[data-tile="blanco"] { background-image: var(--tile-blanco); }
+            &[data-tile="bosque"] { background-image: var(--tile-bosque); }
+            &[data-tile="branco"] { background-image: var(--tile-branco); }
+            &[data-tile="cacau"] { background-image: var(--tile-cacau); }
+            &[data-tile="camelo"] { background-image: var(--tile-camelo); }
+            &[data-tile="camomila"] { background-image: var(--tile-camomila); }
+            &[data-tile="camurca"] { background-image: var(--tile-camurca); }
+            &[data-tile="celeste"] { background-image: var(--tile-celeste); }
+            &[data-tile="cinza-claro"] { background-image: var(--tile-cinza-claro); }
+            &[data-tile="cinza-escuro"] { background-image: var(--tile-cinza-escuro); }
+            &[data-tile="cobalto"] { background-image: var(--tile-cobalto); }
+            &[data-tile="costanho"] { background-image: var(--tile-costanho); }
+            &[data-tile="creme"] { background-image: var(--tile-creme); }
             &[data-tile="sunset"] { background-image: var(--tile-sunset); }
+            &[data-tile="esmeralda"] { background-image: var(--tile-esmeralda); }
+            &[data-tile="indigo"] { background-image: var(--tile-indigo); }
+            &[data-tile="kiwi"] { background-image: var(--tile-kiwi); }
+            &[data-tile="laranja"] { background-image: var(--tile-laranja); }
+            &[data-tile="logoa"] { background-image: var(--tile-logoa); }
+            &[data-tile="marfim"] { background-image: var(--tile-marfim); }
+            &[data-tile="marinho"] { background-image: var(--tile-marinho); }
+            &[data-tile="menta"] { background-image: var(--tile-menta); }
+            &[data-tile="nordico"] { background-image: var(--tile-nordico); }
+            &[data-tile="papaua"] { background-image: var(--tile-papaua); }
+            &[data-tile="papiro"] { background-image: var(--tile-papiro); }
+            &[data-tile="erola"] { background-image: var(--tile-erola); }
+            &[data-tile="petroleo"] { background-image: var(--tile-petroleo); }
+            &[data-tile="preto"] { background-image: var(--tile-preto); }
+            &[data-tile="rosa-clara"] { background-image: var(--tile-rosa-clara); }
+            &[data-tile="rosa-velho"] { background-image: var(--tile-rosa-velho); }
+            &[data-tile="safira"] { background-image: var(--tile-safira); }
+            &[data-tile="salmoa"] { background-image: var(--tile-salmoa); }
+            &[data-tile="sangue-de-boi"] { background-image: var(--tile-sangue-de-boi); }
+            &[data-tile="tangerina"] { background-image: var(--tile-tangerina); }
+            &[data-tile="tejo"] { background-image: var(--tile-tejo); }
+            &[data-tile="tempestade"] { background-image: var(--tile-tempestade); }
+            &[data-tile="turquesa"] { background-image: var(--tile-turquesa); }
+            &[data-tile="verde-agua"] { background-image: var(--tile-verde-agua); }
+            &[data-tile="verde-garrafa"] { background-image: var(--tile-verde-garrafa); }
+            &[data-tile="verde-nero"] { background-image: var(--tile-verde-nero); }
         }
     }
     nav {
@@ -87,40 +167,124 @@ body {
         display: flex;
         flex-wrap: wrap;
         gap: 0.25rem;
-        span {
+        > span {
             flex: 1 1 100%;
             font-size: 0.875rem;
             display: block;
         }
         label {
             flex: 0 1 auto;
-            font-size: 0;
             border-style: solid;
             border-color: #333;
             border-width: 1px;
             border-radius: 3px;
             display: inline-block;
-            overflow: hidden;
             width: 2rem;
             height: 2rem;
+            position: relative;
             &:has(input:checked) {
                 outline: dashed 2px #cc3300;
+            }
+            span {
+                display: none;
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translate(-50%, -0.5rem);
+                padding: 0.25rem 1rem;
+                background-color: white;
+                border: solid 1px #333;
+                border-radius: 0.25rem;
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-color: white;
+                    border-right: solid 1px #333;
+                    border-bottom: solid 1px #333;
+                    position: absolute;
+                    left: 50%;
+                    top: 100%;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+            &:hover span {
+                display: block;
+            }
+            &[data-qty]:after {
+                content: attr(data-qty);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: 100%;
+                left: 100%;
+                height: 1rem;
+                min-width: 1rem;
+                padding: 0.1rem;
+                border-radius: 0.5rem;
+                background-color: red;
+                color: white;
+                font-size: 0.75rem;
+                box-sizing: border-box;
+                transform: translate(-50%, 50%);
+                z-index: 2;
             }
         }
         input {
             opacity: 0;
         }
     }
-    [data-action="tiles"] label { background-size: 110%; background-position: center; }
-    [data-action="tiles"] label:has([value="amethyst"]) { background-image: var(--tile-amethyst); }
-    [data-action="tiles"] label:has([value="leaf"]) { background-image: var(--tile-leaf); }
-    [data-action="tiles"] label:has([value="marshmallow"]) { background-image: var(--tile-marshmallow); }
-    [data-action="tiles"] label:has([value="ocean"]) { background-image: var(--tile-ocean); }
-    [data-action="tiles"] label:has([value="ruby"]) { background-image: var(--tile-ruby); }
-    [data-action="tiles"] label:has([value="sand"]) { background-image: var(--tile-sand); }
-    [data-action="tiles"] label:has([value="sky"]) { background-image: var(--tile-sky); }
-    [data-action="tiles"] label:has([value="snow"]) { background-image: var(--tile-snow); }
+    [data-action="tiles"] label:has([value="alface"]) { background-image: var(--tile-alface); }
+    [data-action="tiles"] label:has([value="alfazema"]) { background-image: var(--tile-alfazema); }
+    [data-action="tiles"] label:has([value="amarelo"]) { background-image: var(--tile-amarelo); }
+    [data-action="tiles"] label:has([value="ambar"]) { background-image: var(--tile-ambar); }
+    [data-action="tiles"] label:has([value="areia"]) { background-image: var(--tile-areia); }
+    [data-action="tiles"] label:has([value="artico"]) { background-image: var(--tile-artico); }
+    [data-action="tiles"] label:has([value="atlantico"]) { background-image: var(--tile-atlantico); }
+    [data-action="tiles"] label:has([value="bege"]) { background-image: var(--tile-bege); }
+    [data-action="tiles"] label:has([value="beringela"]) { background-image: var(--tile-beringela); }
+    [data-action="tiles"] label:has([value="blanco"]) { background-image: var(--tile-blanco); }
+    [data-action="tiles"] label:has([value="bosque"]) { background-image: var(--tile-bosque); }
+    [data-action="tiles"] label:has([value="branco"]) { background-image: var(--tile-branco); }
+    [data-action="tiles"] label:has([value="cacau"]) { background-image: var(--tile-cacau); }
+    [data-action="tiles"] label:has([value="camelo"]) { background-image: var(--tile-camelo); }
+    [data-action="tiles"] label:has([value="camomila"]) { background-image: var(--tile-camomila); }
+    [data-action="tiles"] label:has([value="camurca"]) { background-image: var(--tile-camurca); }
+    [data-action="tiles"] label:has([value="celeste"]) { background-image: var(--tile-celeste); }
+    [data-action="tiles"] label:has([value="cinza-claro"]) { background-image: var(--tile-cinza-claro); }
+    [data-action="tiles"] label:has([value="cinza-escuro"]) { background-image: var(--tile-cinza-escuro); }
+    [data-action="tiles"] label:has([value="cobalto"]) { background-image: var(--tile-cobalto); }
+    [data-action="tiles"] label:has([value="costanho"]) { background-image: var(--tile-costanho); }
+    [data-action="tiles"] label:has([value="creme"]) { background-image: var(--tile-creme); }
     [data-action="tiles"] label:has([value="sunset"]) { background-image: var(--tile-sunset); }
+    [data-action="tiles"] label:has([value="esmeralda"]) { background-image: var(--tile-esmeralda); }
+    [data-action="tiles"] label:has([value="indigo"]) { background-image: var(--tile-indigo); }
+    [data-action="tiles"] label:has([value="kiwi"]) { background-image: var(--tile-kiwi); }
+    [data-action="tiles"] label:has([value="laranja"]) { background-image: var(--tile-laranja); }
+    [data-action="tiles"] label:has([value="logoa"]) { background-image: var(--tile-logoa); }
+    [data-action="tiles"] label:has([value="marfim"]) { background-image: var(--tile-marfim); }
+    [data-action="tiles"] label:has([value="marinho"]) { background-image: var(--tile-marinho); }
+    [data-action="tiles"] label:has([value="menta"]) { background-image: var(--tile-menta); }
+    [data-action="tiles"] label:has([value="nordico"]) { background-image: var(--tile-nordico); }
+    [data-action="tiles"] label:has([value="papaua"]) { background-image: var(--tile-papaua); }
+    [data-action="tiles"] label:has([value="papiro"]) { background-image: var(--tile-papiro); }
+    [data-action="tiles"] label:has([value="erola"]) { background-image: var(--tile-erola); }
+    [data-action="tiles"] label:has([value="petroleo"]) { background-image: var(--tile-petroleo); }
+    [data-action="tiles"] label:has([value="preto"]) { background-image: var(--tile-preto); }
+    [data-action="tiles"] label:has([value="rosa-clara"]) { background-image: var(--tile-rosa-clara); }
+    [data-action="tiles"] label:has([value="rosa-velho"]) { background-image: var(--tile-rosa-velho); }
+    [data-action="tiles"] label:has([value="safira"]) { background-image: var(--tile-safira); }
+    [data-action="tiles"] label:has([value="salmoa"]) { background-image: var(--tile-salmoa); }
+    [data-action="tiles"] label:has([value="sangue-de-boi"]) { background-image: var(--tile-sangue-de-boi); }
+    [data-action="tiles"] label:has([value="tangerina"]) { background-image: var(--tile-tangerina); }
+    [data-action="tiles"] label:has([value="tejo"]) { background-image: var(--tile-tejo); }
+    [data-action="tiles"] label:has([value="tempestade"]) { background-image: var(--tile-tempestade); }
+    [data-action="tiles"] label:has([value="turquesa"]) { background-image: var(--tile-turquesa); }
+    [data-action="tiles"] label:has([value="verde-agua"]) { background-image: var(--tile-verde-agua); }
+    [data-action="tiles"] label:has([value="verde-garrafa"]) { background-image: var(--tile-verde-garrafa); }
+    [data-action="tiles"] label:has([value="verde-nero"]) { background-image: var(--tile-verde-nero); }
     [data-action="shuffle"] {
         cursor: pointer;
         min-height: 2rem;

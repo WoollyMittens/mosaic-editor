@@ -99,6 +99,8 @@ class MosaicGrid {
         evt.preventDefault();
         // apply the active tile code
         element.setAttribute('data-tile', this.tile);
+        // tally the tiles
+        this.tallyTiles();
     }
 
     generateMosaic(evt) {
@@ -129,6 +131,17 @@ class MosaicGrid {
             );
             // assign the value to the tile
             tile.setAttribute('data-tile', value);
+        }
+    }
+
+    tallyTiles() {
+        const swatches = this.cfg.tiles.querySelectorAll('input');
+        // for every swatch
+        for (let swatch of swatches) {
+            // count its instances
+            let instances = this.cfg.grid.querySelectorAll(`[data-tile="${swatch.value}"]`);
+            if (instances && instances.length > 0) { swatch.parentNode.setAttribute('data-qty', instances.length) } 
+            else { swatch.parentNode.removeAttribute('data-qty') }
         }
     }
 
