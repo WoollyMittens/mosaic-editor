@@ -108,29 +108,39 @@ class MosaicGrid {
         evt.preventDefault();
         // get the tiles and swatches
         const tiles = this.cfg.grid.querySelectorAll('button');
-        const swatches = this.cfg.tiles.querySelectorAll('input');
+        const swatches = this.cfg.selection.querySelectorAll('input:checked');
         const max = swatches.length;
         const cols = this.cols;
-        // pick tiles without identical adjacents
-        for (let index = 0; index < tiles.length; index += 1) {
-			// calculate the coordinates
-            let tile = tiles[index];
-			let x = index % cols;
-			let y = parseInt(index / cols);
-            // calculate the indices of the surrounding tiles
-            let top = x + (y - 1) * cols;
-            let left = (x - 1) + y * cols;
-            // pick a non-repeating tile
-            let value;
-            do {
+        if (swatches.length > 2) {
+            // pick tiles without identical adjacents
+            for (let index = 0; index < tiles.length; index += 1) {
+                // calculate the coordinates
+                let tile = tiles[index];
+                let x = index % cols;
+                let y = parseInt(index / cols);
+                // calculate the indices of the surrounding tiles
+                let top = x + (y - 1) * cols;
+                let left = (x - 1) + y * cols;
+                // pick a non-repeating tile
+                let value;
+                do {
+                    let pick = Math.floor(max * Math.random());
+                    value = swatches[pick].value;
+                } while (
+                    value == tiles[top]?.getAttribute('data-tile') || 
+                    value == tiles[left]?.getAttribute('data-tile')
+                );
+                // assign the value to the tile
+                tile.setAttribute('data-tile', value);
+            }
+        }
+        else if(swatches.length > 0) {
+            for (let index = 0; index < tiles.length; index += 1) {
+                let tile = tiles[index];
                 let pick = Math.floor(max * Math.random());
-                value = swatches[pick].value;
-            } while (
-                value == tiles[top]?.getAttribute('data-tile') || 
-                value == tiles[left]?.getAttribute('data-tile')
-            );
-            // assign the value to the tile
-            tile.setAttribute('data-tile', value);
+                let value = swatches[pick].value;
+                tile.setAttribute('data-tile', value);
+            }
         }
         // tally the tiles
         this.tallyTiles();
@@ -157,5 +167,6 @@ new MosaicGrid({
     'gap': document.querySelector('#mosaic-grid [data-action="gap"]'),
     'grout': document.querySelector('#mosaic-grid [data-action="grout"]'),
     'tiles': document.querySelector('#mosaic-grid [data-action="tiles"]'),
+    'selection': document.querySelector('#mosaic-grid [data-action="selection"]'),
     'shuffle': document.querySelector('#mosaic-grid [data-action="shuffle"]')
 });
