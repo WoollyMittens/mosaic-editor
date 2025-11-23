@@ -181,7 +181,27 @@ body {
             font-size: 0.875rem;
             display: block;
         }
-        label {
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            flex: 0 1 auto;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        label:has([type="number"]) {
+            span {
+                display: none;
+            }
+            input[type="number"] {
+                width: 100%;
+                min-height: 2rem;
+                padding: 0.25rem 0 0.35rem 1rem;
+            }
+        }
+        label:has([type="radio"]),
+        label:has([type="checkbox"]) {
             flex: 0 1 auto;
             border-style: solid;
             border-color: #333;
@@ -240,9 +260,12 @@ body {
                 transform: translate(-50%, 50%);
                 z-index: 2;
             }
+            input {
+                opacity: 0;
+            }
         }
-        input {
-            opacity: 0;
+        label:has([type="checkbox"]) {
+            width: 3.5rem;
         }
     }
     [role="radiogroup"] label:has([value="tile_0"]) { background-image: var(--tile-0); }
