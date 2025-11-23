@@ -1,13 +1,57 @@
 :root {
-    --tile-0: url("./images/tile_0.jpg");
-    --tile-1: url("./images/tile_1.jpg");
-    --tile-2: url("./images/tile_2.jpg");
-    --tile-3: url("./images/tile_3.jpg");
-    --tile-4: url("./images/tile_4.jpg");
-    --tile-5: url("./images/tile_5.jpg");
-    --tile-6: url("./images/tile_6.jpg");
-    --tile-7: url("./images/tile_7.jpg");
-    --tile-8: url("./images/tile_8.jpg");
+    --tile-0: url("./images/alface.png");
+    --tile-1: url("./images/alfazema.png");
+    --tile-2: url("./images/amarelo.png");
+    --tile-3: url("./images/ambar.png");
+    --tile-4: url("./images/areia.png");
+    --tile-5: url("./images/artico.png");
+    --tile-6: url("./images/atlantico.png");
+    --tile-7: url("./images/bege.png");
+    --tile-8: url("./images/beringela.png");
+    --tile-9: url("./images/blanco.png");
+
+    --tile-10: url("./images/bosque.png");
+    --tile-11: url("./images/branco.png");
+    --tile-12: url("./images/cacau.png");
+    --tile-13: url("./images/camelo.png");
+    --tile-14: url("./images/camomila.png");
+    --tile-15: url("./images/camurca.png");
+    --tile-16: url("./images/celeste.png");
+    --tile-17: url("./images/cinza-claro.png");
+    --tile-18: url("./images/cinza-escuro.png");
+    --tile-19: url("./images/cobalto.png");
+
+    --tile-20: url("./images/costanho.png");
+    --tile-21: url("./images/creme.png");
+    --tile-22: url("./images/encarnado.png");
+    --tile-23: url("./images/esmeralda.png");
+    --tile-24: url("./images/indigo.png");
+    --tile-25: url("./images/kiwi.png");
+    --tile-26: url("./images/laranja.png");
+    --tile-27: url("./images/logoa.png");
+    --tile-28: url("./images/marfim.png");
+    --tile-29: url("./images/marinho.png");
+
+    --tile-30: url("./images/menta.png");
+    --tile-31: url("./images/nordico.png");
+    --tile-32: url("./images/papaua.png");
+    --tile-33: url("./images/papiro.png");
+    --tile-34: url("./images/perola.png");
+    --tile-35: url("./images/petroleo.png");
+    --tile-36: url("./images/preto.png");
+    --tile-37: url("./images/rosa-clara.png");
+    --tile-38: url("./images/rosa-velho.png");
+    --tile-39: url("./images/safira.png");
+
+    --tile-40: url("./images/salmoa.png");
+    --tile-41: url("./images/sangue-de-boi.png");
+    --tile-42: url("./images/tangerina.png");
+    --tile-43: url("./images/tejo.png");
+    --tile-44: url("./images/tempestade.png");
+    --tile-45: url("./images/turquesa.png");
+    --tile-46: url("./images/verde-agua.png");
+    --tile-47: url("./images/verde-garrafa.png");
+    --tile-48: url("./images/verde-nero.png");
 }
 
 body {
@@ -31,7 +75,7 @@ body {
             background-size: 101% auto;
             background-position: center;
             border: none;
-            &[data-tile="tile_0"] { background-image: var(--tile-0); filter:brightness(1.05); }
+            &[data-tile="tile_0"] { background-image: var(--tile-0); }
             &[data-tile="tile_1"] { background-image: var(--tile-1); }
             &[data-tile="tile_2"] { background-image: var(--tile-2); }
             &[data-tile="tile_3"] { background-image: var(--tile-3); }
@@ -40,6 +84,50 @@ body {
             &[data-tile="tile_6"] { background-image: var(--tile-6); }
             &[data-tile="tile_7"] { background-image: var(--tile-7); }
             &[data-tile="tile_8"] { background-image: var(--tile-8); }
+            &[data-tile="tile_9"] { background-image: var(--tile-9); }
+        
+            &[data-tile="tile_10"] { background-image: var(--tile-10); }
+            &[data-tile="tile_11"] { background-image: var(--tile-11); }
+            &[data-tile="tile_12"] { background-image: var(--tile-12); }
+            &[data-tile="tile_13"] { background-image: var(--tile-13); }
+            &[data-tile="tile_14"] { background-image: var(--tile-14); }
+            &[data-tile="tile_15"] { background-image: var(--tile-15); }
+            &[data-tile="tile_16"] { background-image: var(--tile-16); }
+            &[data-tile="tile_17"] { background-image: var(--tile-17); }
+            &[data-tile="tile_18"] { background-image: var(--tile-18); }
+            &[data-tile="tile_19"] { background-image: var(--tile-19); }
+        
+            &[data-tile="tile_20"] { background-image: var(--tile-20); }
+            &[data-tile="tile_21"] { background-image: var(--tile-21); }
+            &[data-tile="tile_22"] { background-image: var(--tile-22); }
+            &[data-tile="tile_23"] { background-image: var(--tile-23); }
+            &[data-tile="tile_24"] { background-image: var(--tile-24); }
+            &[data-tile="tile_25"] { background-image: var(--tile-25); }
+            &[data-tile="tile_26"] { background-image: var(--tile-26); }
+            &[data-tile="tile_27"] { background-image: var(--tile-27); }
+            &[data-tile="tile_28"] { background-image: var(--tile-28); }
+            &[data-tile="tile_29"] { background-image: var(--tile-29); }
+        
+            &[data-tile="tile_30"] { background-image: var(--tile-30); }
+            &[data-tile="tile_31"] { background-image: var(--tile-31); }
+            &[data-tile="tile_32"] { background-image: var(--tile-32); }
+            &[data-tile="tile_33"] { background-image: var(--tile-33); }
+            &[data-tile="tile_34"] { background-image: var(--tile-34); filter:brightness(1.05); }
+            &[data-tile="tile_35"] { background-image: var(--tile-35); }
+            &[data-tile="tile_36"] { background-image: var(--tile-36); }
+            &[data-tile="tile_37"] { background-image: var(--tile-37); }
+            &[data-tile="tile_38"] { background-image: var(--tile-38); }
+            &[data-tile="tile_39"] { background-image: var(--tile-39); }
+        
+            &[data-tile="tile_40"] { background-image: var(--tile-40); }
+            &[data-tile="tile_41"] { background-image: var(--tile-41); }
+            &[data-tile="tile_42"] { background-image: var(--tile-42); }
+            &[data-tile="tile_43"] { background-image: var(--tile-43); }
+            &[data-tile="tile_44"] { background-image: var(--tile-44); }
+            &[data-tile="tile_45"] { background-image: var(--tile-45); }
+            &[data-tile="tile_46"] { background-image: var(--tile-46); }
+            &[data-tile="tile_47"] { background-image: var(--tile-47); }
+            &[data-tile="tile_48"] { background-image: var(--tile-48); }
         }
     }
     nav {
@@ -157,7 +245,7 @@ body {
             opacity: 0;
         }
     }
-    [role="radiogroup"] label:has([value="tile_0"]) { background-image: var(--tile-0); filter:brightness(1.05); }
+    [role="radiogroup"] label:has([value="tile_0"]) { background-image: var(--tile-0); }
     [role="radiogroup"] label:has([value="tile_1"]) { background-image: var(--tile-1); }
     [role="radiogroup"] label:has([value="tile_2"]) { background-image: var(--tile-2); }
     [role="radiogroup"] label:has([value="tile_3"]) { background-image: var(--tile-3); }
@@ -166,6 +254,51 @@ body {
     [role="radiogroup"] label:has([value="tile_6"]) { background-image: var(--tile-6); }
     [role="radiogroup"] label:has([value="tile_7"]) { background-image: var(--tile-7); }
     [role="radiogroup"] label:has([value="tile_8"]) { background-image: var(--tile-8); }
+    [role="radiogroup"] label:has([value="tile_9"]) { background-image: var(--tile-9); }
+
+    [role="radiogroup"] label:has([value="tile_10"]) { background-image: var(--tile-10); }
+    [role="radiogroup"] label:has([value="tile_11"]) { background-image: var(--tile-11); }
+    [role="radiogroup"] label:has([value="tile_12"]) { background-image: var(--tile-12); }
+    [role="radiogroup"] label:has([value="tile_13"]) { background-image: var(--tile-13); }
+    [role="radiogroup"] label:has([value="tile_14"]) { background-image: var(--tile-14); }
+    [role="radiogroup"] label:has([value="tile_15"]) { background-image: var(--tile-15); }
+    [role="radiogroup"] label:has([value="tile_16"]) { background-image: var(--tile-16); }
+    [role="radiogroup"] label:has([value="tile_17"]) { background-image: var(--tile-17); }
+    [role="radiogroup"] label:has([value="tile_18"]) { background-image: var(--tile-18); }
+    [role="radiogroup"] label:has([value="tile_19"]) { background-image: var(--tile-19); }
+
+    [role="radiogroup"] label:has([value="tile_20"]) { background-image: var(--tile-20); }
+    [role="radiogroup"] label:has([value="tile_21"]) { background-image: var(--tile-21); }
+    [role="radiogroup"] label:has([value="tile_22"]) { background-image: var(--tile-22); }
+    [role="radiogroup"] label:has([value="tile_23"]) { background-image: var(--tile-23); }
+    [role="radiogroup"] label:has([value="tile_24"]) { background-image: var(--tile-24); }
+    [role="radiogroup"] label:has([value="tile_25"]) { background-image: var(--tile-25); }
+    [role="radiogroup"] label:has([value="tile_26"]) { background-image: var(--tile-26); }
+    [role="radiogroup"] label:has([value="tile_27"]) { background-image: var(--tile-27); }
+    [role="radiogroup"] label:has([value="tile_28"]) { background-image: var(--tile-28); }
+    [role="radiogroup"] label:has([value="tile_29"]) { background-image: var(--tile-29); }
+
+    [role="radiogroup"] label:has([value="tile_30"]) { background-image: var(--tile-30); }
+    [role="radiogroup"] label:has([value="tile_31"]) { background-image: var(--tile-31); }
+    [role="radiogroup"] label:has([value="tile_32"]) { background-image: var(--tile-32); }
+    [role="radiogroup"] label:has([value="tile_33"]) { background-image: var(--tile-33); }
+    [role="radiogroup"] label:has([value="tile_34"]) { background-image: var(--tile-34); filter:brightness(1.05); }
+    [role="radiogroup"] label:has([value="tile_35"]) { background-image: var(--tile-35); }
+    [role="radiogroup"] label:has([value="tile_36"]) { background-image: var(--tile-36); }
+    [role="radiogroup"] label:has([value="tile_37"]) { background-image: var(--tile-37); }
+    [role="radiogroup"] label:has([value="tile_38"]) { background-image: var(--tile-38); }
+    [role="radiogroup"] label:has([value="tile_39"]) { background-image: var(--tile-39); }
+
+    [role="radiogroup"] label:has([value="tile_40"]) { background-image: var(--tile-40); }
+    [role="radiogroup"] label:has([value="tile_41"]) { background-image: var(--tile-41); }
+    [role="radiogroup"] label:has([value="tile_42"]) { background-image: var(--tile-42); }
+    [role="radiogroup"] label:has([value="tile_43"]) { background-image: var(--tile-43); }
+    [role="radiogroup"] label:has([value="tile_44"]) { background-image: var(--tile-44); }
+    [role="radiogroup"] label:has([value="tile_45"]) { background-image: var(--tile-45); }
+    [role="radiogroup"] label:has([value="tile_46"]) { background-image: var(--tile-46); }
+    [role="radiogroup"] label:has([value="tile_47"]) { background-image: var(--tile-47); }
+    [role="radiogroup"] label:has([value="tile_48"]) { background-image: var(--tile-48); }
+
     [data-action="shuffle"] {
         cursor: pointer;
         min-height: 2rem;
